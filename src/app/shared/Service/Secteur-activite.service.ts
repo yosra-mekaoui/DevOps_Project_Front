@@ -10,15 +10,15 @@ export class SecteurActiviteService {
   constructor(private httpClient: HttpClient) { }
 
   getAllSecteurActivites() {
-    return this.httpClient.get(`${this.API_URL}/retrieve-all-secteurActivite`)
+    return this.httpClient.get(`${this.API_URL}`)
   }
   addSecteurActivite(secteurActivite : any) {
-    return this.httpClient.post(`${this.API_URL}/add-secteurActivite`, secteurActivite)
+    return this.httpClient.post(`${this.API_URL}`, secteurActivite)
   }
   editSecteurActivite(secteurActivite : any){
-    return this.httpClient.put(`${this.API_URL}/modify-secteurActivite`, secteurActivite)
+    return this.httpClient.put(`${this.API_URL}`, secteurActivite)
   }
   deleteSecteurActivite(idSecteurActivite : any){
-    return  this.httpClient.delete(`${this.API_URL}/remove-secteurActivite/${idSecteurActivite}`)
+    return  this.httpClient.delete(`${this.API_URL}/${idSecteurActivite}`)
   }
 }
